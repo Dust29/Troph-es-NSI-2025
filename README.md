@@ -1,1 +1,1 @@
-# Troph-es-NSI-2025
+# Trophees-NSI-2025
