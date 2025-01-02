@@ -20,27 +20,6 @@ class Fenetre(QDialog):
         super().__init__()
         self.titre = "Menu Princpical"
 
-        # La taille est défini d'une facon un peu bizarre :
-        # left et top sont les cos de "départs" (L'origine de la fenètre)
-        # Largeur et Hauteur sont les dimensions.
-        # Assumons que l'écran est en 1920*1080
-
-        # Les "marges" sur le coté sont les suivantes :
-        # 1/3 de 1920 de chaque coté. (si largeur = 768)
-
-        self.left = 576
-        self.top = 200  # Valeur aléatoire
-
-        # Vrai "taille" de la fenètre
-        self.largeur = 768
-        self.hauteur = 300 # Valeur aléatoire
-
-        self.InitWindow()
-
-        # Définir un timer pour surveiller les touches
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(self.check_key_press)
-        self.timer.start(100)  # Vérifier toutes les 100 ms
         
 
 #bonjour

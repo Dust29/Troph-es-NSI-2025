@@ -4,6 +4,7 @@ from PySide6.QtGui import *
 from PySide6.QtWidgets import QApplication, QDialog, QVBoxLayout, QLabel
 from PySide6 import QtCore
 from PySide6.QtCore import QTimer
+from Comment_ca_marche import *
 
 import sys
 from PySide6.QtGui import QPixmap
@@ -46,6 +47,7 @@ class Window(QDialog):
         if keyboard.is_pressed("z"):  # Vérifie si "p" est pressé
             print("You pressed z")
             self.labelImage.move(x, y - 30)
+            fonction_qui_fait_pas_grand_chose()
         if keyboard.is_pressed("s"):  # Vérifie si "p" est pressé
             print("You pressed s")
             self.labelImage.move(x, y + 30)
