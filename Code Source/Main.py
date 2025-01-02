@@ -43,4 +43,4 @@ class Fenetre(QDialog):
         self.timer.start(100)  # Vérifier toutes les 100 ms
         
 
-
+#bonjour
