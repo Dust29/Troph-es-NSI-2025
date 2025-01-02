@@ -41,3 +41,4 @@ class Fenetre(QDialog):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.check_key_press)
         self.timer.start(100)  # Vérifier toutes les 100 ms
+#ewenn
