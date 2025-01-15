@@ -11,13 +11,15 @@ class Window(QWidget):
         self.resize(512, 256)
         # Download a sprite sheet here:
         # https://plnkr.co/edit/zjYT0KTfj50MejT9?preview
-        self.sprite_sheet = QImage("P:\\Documents\\NSI\\Trophées\\Ressources\\sprites-cat-running.png") #Changer ca en fonction de la machine
-        self.sw = 512
-        self.sh = 256
+        self.sprite_sheet = QImage("P:\\Documents\\NSI\\Trophées\\Ressources\\ELF_RUN1_corrigé.gif")
+        self.sw = 64
+        self.sh = 85
         self.frame_index = 0
         self.x = 0
         self.y = 0
         self.frames = []
+        self.dec=0
+        flag = True
         for i in range(2):
             for j in range(4):
                 self.frames.append(QPoint(j * self.sw, i * self.sh))
@@ -40,11 +42,12 @@ class Window(QWidget):
             self.frame_index += 1
             if self.frame_index >= len(self.frames):
                 self.frame_index = 0
+            self.dec+=2
         self.update()
 
     def paintEvent(self, event):
         qp = QPainter(self)
-        qp.drawImage(0, 0, self.sprite_sheet, self.x, self.y, self.sw, self.sh)
+        qp.drawImage(0+self.dec, 0, self.sprite_sheet, self.x, self.y, self.sw, self.sh)
 
 def main():
     app = QApplication(sys.argv)
